@@ -3,7 +3,9 @@ function displayForecast() {
   let forecastHtml = "";
 
   days.forEach(function (day) {
-    forecastHtml += `
+    forecastHtml =
+      forecastHtml +
+      `
       <div class="row">
         <div class="col-2">
           <div class="forecast-date">${day}</div>
