@@ -1,0 +1,66 @@
+.my-app {
+    margin: 50px auto;
+    height: 80vh;
+    padding: 40px;
+    width: 700px;
+    background-color: #00ffff;
+    box-shadow: #3ac2c2;
+    font-size: 20px;
+}
+
+a {
+    color: #ed0909;
+}
+
+.city-input {
+    margin: 10px;
+    padding: 15px;
+    background-color: #ffe4c4;
+    border-radius: 8px;
+    width: 75%;
+}
+
+.search-input {
+    background-color: hsl(300, 98%, 50%);
+    padding: 15px 30px;
+    border: none;
+    font-size: 16px;
+    margin-left: 5px;
+    border-radius: 6px;
+}
+
+.current-temp {
+    display: static;
+    /* bottom: 50px; */
+    float: right;
+    width: 30%;
+    font-size: 40px;
+    margin: 10px 20px;
+}
+
+.my-forecast {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.future-forecast {
+    opacity: 0.6;
+}
+
+.forecast-date {
+    font-size: 15px;
+    color: #4008f8;
+    opacity: 0.5;
+}
+
+.forecast-temp {
+    font-size: 18px;
+}
+
+
+
+
+.footer {
+    text-align: center;
+    font-size: 25px;
+}
