@@ -22,6 +22,6 @@ function displayForecast() {
   });
   let forecast = document.querySelector("#weather-forecast");
 
-  forecastElem.innerHTML = forecastHtml;
+  forecast.innerHTML = forecastHtml;
 }
 displayForecast();
