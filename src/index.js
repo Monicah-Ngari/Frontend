@@ -1,5 +1,4 @@
 function displayForecast() {
-  let forecast = document.querySelector("#weather-forecast");
   let days = ["Teu", "Wed", "Thur", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -21,6 +20,8 @@ function displayForecast() {
             </div>
             `;
   });
+  let forecast = document.querySelector("#weather-forecast");
+
   forecastElem.innerHTML = forecastHtml;
 }
 displayForecast();
