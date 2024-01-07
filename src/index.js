@@ -9,7 +9,9 @@ let myCity = document.querySelector("#my-input");
 myCity.addEventListener("submit", handleClick);
 
 // Change city
+consonsole.log(axios);
 
+//Change Weather conditons
 function displayForecast() {
   let days = ["Teu", "Wed", "Thur", "Fri", "Sat"];
   let forecastHtml = "";
