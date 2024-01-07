@@ -57,6 +57,10 @@ a {
 
 }
 
+.weathr-icon {
+    text-align: center;
+}
+
 .forecast-temp {
     font-size: 18px;
 }
