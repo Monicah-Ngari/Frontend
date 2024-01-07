@@ -11,8 +11,8 @@ function displayForecast() {
     forecastHtml =
       forecastHtml +
       `
-      <div class="row">
-        <div class="col-2">
+      <div class=""flex-direction: row;">
+        <div class="flex-direction: column-2;">
           <div class="forecast-date">${day}</div>
           <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35" /></div>
           <div class="forecast-temp">
