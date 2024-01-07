@@ -26,6 +26,7 @@ function searchCity(city) {
   axios.get(myUrl).then(refreshWeather);
   consonsole.log(apiKey);
   console.log(myUrl);
+  console.log("Hello world");
 }
 // Change Weather conditons
 
