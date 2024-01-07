@@ -28,6 +28,7 @@ function searchCity(city) {
   console.log(myUrl);
   console.log("Hello world");
 }
+console.log(myUrl);
 // Change Weather conditons
 
 function displayForecast() {
