@@ -1,11 +1,12 @@
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
-  favCity("#my-city".value);
+  searchCity(favCity.value);
 }
 
 let myCity = document.querySelector("#my-input");
 myCity.addEventListener("submit", handleClick);
+searchCity("Nairobi");
 
 // Change city
 
