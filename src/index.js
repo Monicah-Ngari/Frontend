@@ -22,7 +22,7 @@ myCity.addEventListener("submit", handleClick);
 // Change city
 function searchCity(city) {
   let apiKey = "1a2a473db97faf41f0088oe8t98271ff";
-  let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric `;
+  let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(myUrl).then(refreshWeather);
   consonsole.log(axios);
   console.log(myUrl);
