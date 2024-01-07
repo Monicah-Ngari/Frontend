@@ -61,3 +61,5 @@ function displayForecast() {
 displayForecast();
 
 // Weather forecast
+
+searchCity("Nairobi");
