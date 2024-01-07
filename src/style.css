@@ -47,6 +47,11 @@ a {
     opacity: 0.6;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
 .forecast-date {
     font-size: 15px;
     color: #4008f8;

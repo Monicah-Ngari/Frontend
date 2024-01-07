@@ -11,6 +11,7 @@ function displayForecast() {
     forecastHtml =
       forecastHtml +
       `
+      <div class = "flex-container ">
       <div class=""flex-direction: row;">
         <div class="flex-direction: column-2;">
           <div class="forecast-date">${day}</div>
@@ -20,6 +21,7 @@ function displayForecast() {
             <div class="future-forecast">12°</div>
           </div>
         </div>
+      </div>
       </div>
       `;
   });
