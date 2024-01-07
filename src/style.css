@@ -47,10 +47,10 @@ a {
     opacity: 0.6;
 }
 
-.flex-container {
+/* .flex-container {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .forecast-date {
     font-size: 15px;

@@ -1,3 +1,14 @@
+function refreshWeather(response) {
+  let weatherCondition = document.querySelector("#weather-condition");
+  weatherCondition.innerHTML = response.city.data.condition;
+
+  let currentHumidity = document.querySelector("#current-humidity");
+  currentHumidity.innerHTML = response.data.city.condition;
+
+  let windSpeed = document.querySelector("#current-speed");
+  windSpeed.innerHTML = respone.data.city.condition;
+}
+//api functions
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
@@ -14,6 +25,7 @@ function searchCity(city) {
   let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric `;
   axios.get(myUrl).then(refreshWeather);
   consonsole.log(axios);
+  console.log(myUrl);
 }
 // Change Weather conditons
 
@@ -25,9 +37,9 @@ function displayForecast() {
     forecastHtml =
       forecastHtml +
       `
-      <div class = "flex-container ">
-      <div class=""flex-direction: row;">
-        <div class="flex-direction: column-2;">
+      <div>
+      <div class="row-2">
+        <div class="column-2;">
           <div class="forecast-date">${day}</div>
           <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35" /></div>
           <div class="forecast-temp">
