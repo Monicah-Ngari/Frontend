@@ -1,6 +1,7 @@
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
+  let h1 = document.querySelector("#my-city");
   h1.innerHTML = favCity.value;
 }
 
