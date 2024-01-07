@@ -1,3 +1,8 @@
+let myCity = document.querySelector("#my-input");
+myCity.addEventListener("submit", handleClick);
+
+// Change city
+
 function displayForecast() {
   let days = ["Teu", "Wed", "Thur", "Fri", "Sat"];
   let forecastHtml = "";
@@ -24,3 +29,5 @@ function displayForecast() {
 }
 
 displayForecast();
+
+// Weather forecast
