@@ -13,7 +13,7 @@ function refreshWeather(response) {
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
-  searchCity(favCity.value);
+  searchCity = favCity.value;
 }
 
 let myCity = document.querySelector("#my-input");
