@@ -39,7 +39,7 @@ function displayForecast() {
       `
       <div>
       <div class="row-2">
-        <div class="column-2;">
+        <div class="column;">
           <div class="forecast-date">${day}</div>
           <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35" /></div>
           <div class="forecast-temp">
