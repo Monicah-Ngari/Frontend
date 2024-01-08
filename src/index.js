@@ -7,7 +7,7 @@ function refreshWeather(response) {
   weatherCondition.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
-  temperature.innerHTML = response.data.temperature;
+  temperature.innerHTML = response.data.temperature.current;
 }
 //api functions
 function handleClick(event) {
