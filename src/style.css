@@ -32,11 +32,12 @@ a {
 .current-temp {
     display: flex;
     float: right;
+
 }
 
 #temp {
-    font-size: 60px;
-    line-height: 88px;
+    font-size: 40px;
+    line-height: 60px;
     font-weight: bold;
 }
 
