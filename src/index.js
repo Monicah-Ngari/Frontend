@@ -10,7 +10,7 @@ function refreshWeather(response) {
 //api functions
 function handleClick(event) {
   event.preventDefault();
-  let favCity = document.querySelector("#city-input");
+  let favCity = document.querySelector("#city");
   searchCity(favCity.value);
 }
 
