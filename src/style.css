@@ -45,6 +45,9 @@ a {
     font-size: 28;
 }
 
+#icon {
+    margin-bottom: 6px;
+}
 
 .weather-forecast {
     text-align: center;
