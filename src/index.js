@@ -75,8 +75,8 @@ function displayForecast() {
       forecastHtml +
       `
       <div>
-      <div class="row-2">
-        <div class="column;">
+      <div class="row">
+        <div class="column-2;">
           <div class="forecast-date">${day}</div>
           <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35" /></div>
           <div class="forecast-temp">
