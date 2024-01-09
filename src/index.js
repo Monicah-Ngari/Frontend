@@ -100,4 +100,4 @@ displayForecast();
 
 // Weather forecast
 
-searchCity();
+searchCity("Nairobi");
