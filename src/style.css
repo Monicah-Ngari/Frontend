@@ -12,6 +12,14 @@ a {
     color: #ed0909;
 }
 
+.mycity {
+    color: #4008f8;
+    display: flex;
+    justify-content: center;
+
+}
+
+
 .city-input {
     margin: 10px;
     padding: 15px;
