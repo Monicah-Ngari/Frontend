@@ -40,18 +40,11 @@ function formatDate(date) {
 }
 
 // change date
-function getForecast(city) {
-  let myKey = "1a2a473db97faf41f0088oe8t98271ff";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${myKey}`;
-  axios.get(apiUrl).then(displayForecast);
-  console.log(apiUrl);
-}
 
-// ForecastAPI
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
-  searchCity = favCity.value;
+  searchCity(favCity.value);
 }
 
 let myCity = document.querySelector("#my-input");
@@ -66,6 +59,15 @@ function searchCity(city) {
 }
 
 // Change Weather conditons
+
+function getForecast(city) {
+  let myKey = "1a2a473db97faf41f0088oe8t98271ff";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${myKey}`;
+  axios.get(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+
+// ForecastAPI
 
 function displayForecast() {
   let days = ["Teu", "Wed", "Thur", "Fri", "Sat"];
