@@ -4,6 +4,8 @@ function refreshWeather(response) {
   let windSpeed = document.querySelector("#current-speed");
   let temperature = document.querySelector("#temp");
   let weatherIcon = document.querySelector("#icon");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
 
   weatherCondition.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
@@ -11,7 +13,10 @@ function refreshWeather(response) {
   temperature.innerHTML = Math.round(response.data.temperature.current);
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" width="35" />`;
 }
+
 //api functions
+
+// change date
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
