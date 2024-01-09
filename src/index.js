@@ -17,7 +17,7 @@ function refreshWeather(response) {
 
 //api functions
 
-function formatDate(day) {
+function formatDate(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let days = [
