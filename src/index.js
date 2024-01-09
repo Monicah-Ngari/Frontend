@@ -9,7 +9,7 @@ function refreshWeather(response) {
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   temperature.innerHTML = response.data.temperature.current;
-  weatherIcon.innerHTML = response.data.condition.icon - url;
+  weatherIcon.innerHTML = response.data.condition.icon_url;
 }
 //api functions
 function handleClick(event) {
