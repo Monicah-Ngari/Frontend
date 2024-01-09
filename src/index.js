@@ -3,11 +3,13 @@ function refreshWeather(response) {
   let currentHumidity = document.querySelector("#current-humidity");
   let windSpeed = document.querySelector("#current-speed");
   let temperature = document.querySelector("#temp");
+  let weatherIcon = document.querySelector("#icon");
 
   weatherCondition.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   temperature.innerHTML = response.data.temperature.current;
+  weatherIcon.innerHTML = response.data.condition.icon;
 }
 //api functions
 function handleClick(event) {
