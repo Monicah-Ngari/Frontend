@@ -1,5 +1,5 @@
 function refreshWeather(response) {
-  let cityElement = document.querySelector("#city");
+  //let cityElement = document.querySelector("#city");
   let weatherCondition = document.querySelector("#weather-condition");
   let currentHumidity = document.querySelector("#current-humidity");
   let windSpeed = document.querySelector("#current-speed");
@@ -8,7 +8,7 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
-  cityElement = data.response.city;
+  //cityElement = data.response.city;
   weatherCondition.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
@@ -43,16 +43,6 @@ function formatDate(date) {
 
 // change date
 
-function handleClick(event) {
-  event.preventDefault();
-  let favCity = document.querySelector("#city-input");
-  searchCity(favCity.value);
-}
-
-let myCity = document.querySelector("#my-input");
-myCity.addEventListener("submit", handleClick);
-
-// Change city
 function searchCity(city) {
   let apiKey = "1a2a473db97faf41f0088oe8t98271ff";
   let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -79,17 +69,13 @@ function displayForecast() {
     forecastHtml =
       forecastHtml +
       `
-      <div>
       <div class="row">
-        <div class="column-2;">
           <div class="forecast-date">${day}</div>
           <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35" /></div>
           <div class="forecast-temp">
             <div class="future-forecast"><strong>18°</strong></div>
             <div class="future-forecast">12°</div>
           </div>
-        </div>
-      </div>
       </div>
       `;
   });
@@ -101,5 +87,15 @@ function displayForecast() {
 displayForecast();
 
 // Weather forecast
+function handleClick(event) {
+  event.preventDefault();
+  let favCity = document.querySelector("#city-input");
+  searchCity(favCity.value);
+}
+
+let myCity = document.querySelector("#my-input");
+myCity.addEventListener("submit", handleClick);
+
+// Change city
 
 searchCity("Nairobi");

@@ -43,6 +43,11 @@ a {
 
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 #temp {
     font-size: 40px;
     line-height: 60px;
