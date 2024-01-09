@@ -67,11 +67,6 @@ a {
     opacity: 0.6;
 }
 
-/* .flex-container {
-    display: flex;
-    flex-direction: row;
-} */
-
 .forecast-date {
     font-size: 15px;
     color: #4008f8;
@@ -80,6 +75,16 @@ a {
     text-align: center;
     margin-bottom: 10px;
 
+}
+
+.current-humidity {
+    font-weight: bold;
+    color: #04ff08;
+}
+
+.current-speed {
+    font-weight: bold;
+    color: #04ff08;
 }
 
 .weather-icon {
