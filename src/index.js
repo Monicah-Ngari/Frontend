@@ -62,4 +62,4 @@ displayForecast();
 
 // Weather forecast
 
-searchCity("#city");
+searchCity("Nairobi");
