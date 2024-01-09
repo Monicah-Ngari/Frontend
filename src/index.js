@@ -13,6 +13,7 @@ function refreshWeather(response) {
   temperature.innerHTML = Math.round(response.data.temperature.current);
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" width="35" />`;
   timeElement.innerHTML = formatDate(date);
+  getForecast(response.data.city);
 }
 
 //api functions
@@ -39,6 +40,13 @@ function formatDate(date) {
 }
 
 // change date
+function getForecast(city) {
+  let myKey = "1a2a473db97faf41f0088oe8t98271ff";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${myKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+// ForecastAPI
 function handleClick(event) {
   event.preventDefault();
   let favCity = document.querySelector("#city-input");
