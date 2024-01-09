@@ -12,9 +12,31 @@ function refreshWeather(response) {
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   temperature.innerHTML = Math.round(response.data.temperature.current);
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" width="35" />`;
+  timeElement.innerHTML = formatDate(date);
 }
 
 //api functions
+
+function formatDate(day) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Teusday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
+}
 
 // change date
 function handleClick(event) {
