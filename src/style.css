@@ -129,6 +129,6 @@ a {
 .footer {
     text-align: center;
     font-size: 25px;
-    /* margin-bottom: 30px */
-    margin-bottom: 2em;
+    padding-top: 30px;
+
 }
