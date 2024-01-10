@@ -60,23 +60,37 @@ function getForecast(city) {
 }
 
 // ForecastAPI
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Teu", "Wed", "Thur", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
+// Forecast day
 function displayForecast() {
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `
       <div class="row">
-          <div class="forecast-date">${day}</div>
-          <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35" /></div>
+          <div class="forecast-date">${formatDay(day.time)}</div>
+          <div class="weather-icon" id="weather-icon"><img src="${
+            day.condition.icon - url
+          }" alt="" width="35" /></div>
           <div class="forecast-temp">
-            <div class="future-forecast"><strong>${day.temperature.minimum}°</strong></div>
-            <div class="future-forecast">${day.temperature.maximum}°</div>
+            <div class="future-forecast"><strong>${Math.round(
+              day.temperature.minimum
+            )}°</strong></div>
+            <div class="future-forecast">${Math.round(
+              day.temperature.maximum
+            )}°</div>
           </div>
       </div>
       `;
+    }
   });
 
   let forecast = document.querySelector("#weather-forecast");
