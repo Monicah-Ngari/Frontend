@@ -43,11 +43,17 @@ function formatDate(date) {
 
 // change date
 
-function searchCity(city) {
+function searchCity(event) {
+  event.preventDefault();
+  let city = document.getElementById("city-input").value;
+  let heading = document.querySelector("#city");
+  console.log(city);
+  heading.innerHTML = city;
   let apiKey = "1a2a473db97faf41f0088oe8t98271ff";
   let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(myUrl).then(refreshWeather);
-  console.log(myUrl);
+  axios.get(myUrl).then((response) => {
+    console.log(response.data);
+  });
 }
 
 // Change Weather conditons
@@ -67,30 +73,23 @@ function formatDay(timestamp) {
 }
 
 // Forecast day
-function displayForecast(response) {
+function displayForecast() {
+  let days = ["Sun", "Mon", "Teu", "Wed", "Thur"];
   let forecastHtml = "";
 
-  response.data.daily.forEach(function (day, index) {
-    if (index < 6) {
-      forecastHtml =
-        forecastHtml +
-        `
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
       <div class="row">
-          <div class="forecast-date">${formatDay(day.time)}</div>
-          <div class="weather-icon" id="weather-icon"><img src="${
-            day.condition.icon - url
-          }" alt="" width="35" /></div>
+          <div class="forecast-date">${day}</div>
+          <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35"/></div>
           <div class="forecast-temp">
-            <div class="future-forecast"><strong>${Math.round(
-              day.temperature.minimum
-            )}°</strong></div>
-            <div class="future-forecast">${Math.round(
-              day.temperature.maximum
-            )}°</div>
+            <div class="future-forecast"><strong>18°</strong></div>
+            <div class="future-forecast"> 12°</div>
           </div>
       </div>
-      `;
-    }
+   `;
   });
 
   let forecast = document.querySelector("#weather-forecast");
@@ -100,12 +99,7 @@ function displayForecast(response) {
 displayForecast();
 
 // Weather forecast
-function handleClick(event) {
-  event.preventDefault();
-  let favCity = document.querySelector("#city-input");
-  let heading = document.querySelector("#city");
-  heading.innerHTML = favCity.value;
-}
+function handleClick(event) {}
 
 let myCity = document.querySelector("#my-input");
 myCity.addEventListener("submit", handleClick);
