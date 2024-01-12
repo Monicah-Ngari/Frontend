@@ -106,4 +106,4 @@ myCity.addEventListener("submit", handleClick);
 
 // Change city
 
-searchCity("Nairobi");
+// searchCity("Nairobi");
