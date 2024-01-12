@@ -44,7 +44,7 @@ function formatDate(date) {
 // change date
 
 function searchCity(event) {
-  event.preventDefault(searchCity);
+  event.preventDefault();
   let city = document.getElementById("city-input").value;
   let heading = document.querySelector("#city");
   console.log(city);
@@ -53,6 +53,7 @@ function searchCity(event) {
   let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(myUrl).then((response) => {
     console.log(response.data);
+    refreshWeather(response); // Call the refreshWeather function with the response
   });
 }
 
