@@ -53,7 +53,6 @@ function searchCity(event) {
   let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(myUrl).then((response) => {
     console.log(response.data);
-    refreshWeather(response); // Call the refreshWeather function with the response
   });
 }
 
@@ -107,4 +106,4 @@ myCity.addEventListener("submit", handleClick);
 
 // Change city
 
-// searchCity("Nairobi");
+searchCity("Nairobi");
