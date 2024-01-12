@@ -43,8 +43,13 @@ function formatDate(date) {
 
 // change date
 
-function searchCity(event) {
-  event.preventDefault(searchCity);
+function searchCity() {
+  document
+    .getElementById("my-input")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      searchCity(event);
+    });
   let city = document.getElementById("city-input").value;
   let heading = document.querySelector("#city");
   console.log(city);
