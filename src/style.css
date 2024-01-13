@@ -1,4 +1,4 @@
-.my-app {
+#my-app {
     margin: 50px auto;
     height: 80vh;
     padding: 40px;
@@ -12,7 +12,7 @@ a {
     color: #ed0909;
 }
 
-.city {
+#city {
     color: #4008f8;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ a {
 }
 
 
-.city-input {
+#city-input {
     margin: 10px;
     padding: 15px;
     background-color: #ffe4c4;
@@ -28,7 +28,7 @@ a {
     width: 75%;
 }
 
-.search-input {
+#search-input {
     background-color: hsl(300, 98%, 50%);
     padding: 15px 30px;
     border: none;
@@ -37,7 +37,7 @@ a {
     border-radius: 6px;
 }
 
-.current-temp {
+#current-temp {
     display: flex;
     float: right;
 }
@@ -64,16 +64,23 @@ a {
     margin-bottom: 20px;
 }
 
-/* .weather-forecast {
-    text-align: center;
-    font-size: 76px;
-    line-height: 20px;
-    margin-bottom: 10px;
-
-} */
 #weather-forecast {
     display: flex;
     flex-direction: row;
+}
+
+#current-humidity {
+    font-weight: bold;
+    color: #ee0758;
+}
+
+#current-speed {
+    font-weight: bold;
+    color: #ee0758;
+}
+
+#icon {
+    text-align: center;
 }
 
 .my-forecast {
@@ -93,20 +100,6 @@ a {
     text-align: center;
     margin-bottom: 10px;
 
-}
-
-.current-humidity {
-    font-weight: bold;
-    color: #ee0758;
-}
-
-.current-speed {
-    font-weight: bold;
-    color: #ee0758;
-}
-
-.weather-icon {
-    text-align: center;
 }
 
 .forecast-temp {
