@@ -100,7 +100,9 @@ function displayForecast() {
 displayForecast();
 
 // Weather forecast
-function handleClick(event) {}
+function handleClick(event) {
+  event.preventDefault;
+}
 
 let myCity = document.querySelector("#my-input");
 myCity.addEventListener("submit", handleClick);
