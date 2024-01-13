@@ -40,6 +40,7 @@ a {
 .current-temp {
     display: flex;
     float: right;
+    font-size: 20px;
 
 }
 
