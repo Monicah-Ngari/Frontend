@@ -57,6 +57,7 @@ function searchCity(event) {
     console.log(response.data);
   });
 }
+searchCity();
 
 // Change Weather conditons
 
@@ -118,5 +119,3 @@ let myCity = document.querySelector("#my-input");
 myCity.addEventListener("submit", handleClick);
 
 // Change city
-
-searchCity("Nairobi");
