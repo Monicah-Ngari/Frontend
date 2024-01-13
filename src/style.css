@@ -40,8 +40,6 @@ a {
 .current-temp {
     display: flex;
     float: right;
-    font-size: 20px;
-
 }
 
 .row {
@@ -52,7 +50,7 @@ a {
 }
 
 #temp {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 60px;
     font-weight: bold;
 }
