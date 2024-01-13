@@ -1,5 +1,5 @@
 function refreshWeather(response) {
-  // let cityElement = document.querySelector("#city");
+  let cityElement = document.querySelector("#city");
   let weatherCondition = document.querySelector("#weather-condition");
   let currentHumidity = document.querySelector("#current-humidity");
   let windSpeed = document.querySelector("#current-speed");
@@ -8,7 +8,7 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
-  // cityElement = data.response.city;
+  cityElement = data.response.city;
   weatherCondition.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
