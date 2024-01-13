@@ -78,12 +78,13 @@ function displayForecast() {
   let days = ["Sun", "Mon", "Teu", "Wed", "Thur"];
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  days.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
       <div class="row">
-          <div class="forecast-date">${day}</div>
+          <div class="forecast-date">${formatDay(day.time)}</div>
           <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35"/></div>
           <div class="forecast-temp">
             <div class="future-forecast"><strong>18°</strong></div>
@@ -91,6 +92,7 @@ function displayForecast() {
           </div>
       </div>
    `;
+    }
   });
 
   let forecast = document.querySelector("#weather-forecast");
