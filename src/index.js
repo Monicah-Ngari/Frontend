@@ -77,17 +77,18 @@ function formatDay(timestamp) {
 
 // Forecast day
 function displayForecast() {
-  let days = ["Sun", "Mon", "Teu", "Wed", "Thur"];
   let forecastHtml = "";
 
-  days.forEach(function (day, index) {
+  response.data.daily.forEach(function (day, index) {
     if (index < 5) {
       forecastHtml =
         forecastHtml +
         `
       <div class="row">
           <div class="forecast-date">${formatDay(day.time)}</div>
-          <div class="weather-icon" id="weather-icon"><img src="src/weather.png" alt="" width="35"/></div>
+          <div class="weather-icon" id="weather-icon"><img src="${
+            day.condition.icon_url
+          }" alt="" width="35"/></div>
           <div class="forecast-temp">
             <div class="future-forecast"><strong>18°</strong></div>
             <div class="future-forecast"> 12°</div>
