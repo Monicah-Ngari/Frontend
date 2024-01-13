@@ -90,8 +90,12 @@ function displayForecast(response) {
             day.condition.icon_url
           }" alt="" width="50"/></div>
           <div class="forecast-temp">
-            <div class="future-forecast"><strong>18°</strong></div>
-            <div class="future-forecast"> 12°</div>
+            <div class="future-forecast"><strong>${Math.round(
+              day.temperature.minimum
+            )}°</strong></div>
+            <div class="future-forecast">${Math.round(
+              day.temperature.maximum
+            )}°</div>
           </div>
       </div>
    `;
