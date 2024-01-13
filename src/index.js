@@ -13,7 +13,7 @@ function refreshWeather(response) {
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
   temperature.innerHTML = Math.round(response.data.temperature.current);
-  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" width="35" />`;
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" width="50" />`;
   timeElement.innerHTML = formatDate(date);
   getForecast(response.data.city);
 }
@@ -27,6 +27,7 @@ function formatDate(date) {
     "Sunday",
     "Monday",
     "Teusday",
+
     "Wednesday",
     "Thursday",
     "Friday",
@@ -118,4 +119,4 @@ myCity.addEventListener("submit", handleClick);
 
 // Change city
 
-searchCity();
+searchCity("Nairobi");
