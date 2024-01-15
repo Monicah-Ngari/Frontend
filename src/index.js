@@ -47,7 +47,7 @@ function formatDate(date) {
 function searchCity(event) {
   event.preventDefault();
   let city = document.getElementById("city-input").value;
-  let heading = document.querySelector("#city");
+  let heading = document.querySelectElementbyId("city");
   console.log(city);
   heading.innerHTML = city;
   let apiKey = "1a2a473db97faf41f0088oe8t98271ff";
