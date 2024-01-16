@@ -57,7 +57,7 @@ function searchCity(event) {
     console.log(response.data);
   });
 }
-searchCity();
+searchCity("Nairobi");
 
 // Change Weather conditons
 
