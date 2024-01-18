@@ -8,7 +8,7 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
-  cityElement = response.data.city;
+  cityElement.innerHTML = response.data.city;
   weatherCondition.innerHTML = response.data.condition.description;
   currentHumidity.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
@@ -47,17 +47,10 @@ function formatDate(date) {
 function searchCity(event) {
   event.preventDefault();
   let city = document.getElementById("city-input").value;
-  let heading = document.getElementById("city");
-  console.log(city);
-  heading.innerHTML = city;
   let apiKey = "1a2a473db97faf41f0088oe8t98271ff";
   let myUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(myUrl).then(refreshWeather);
-  axios.get(myUrl).then((response) => {
-    console.log(response.data);
-  });
 }
-searchCity();
 
 // Change Weather conditons
 
@@ -65,9 +58,6 @@ function getForecast(city) {
   let apiKey = "1a2a473db97faf41f0088oe8t98271ff";
   let myUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios.get(myUrl).then(displayForecast);
-  axios.get(myUrl).then((response) => {
-    console.log(response.data);
-  });
 }
 
 // ForecastAPI
@@ -108,14 +98,5 @@ function displayForecast(response) {
   forecast.innerHTML = forecastHtml;
 }
 
-displayForecast();
-
-// Weather forecast
-function handleClick(event) {
-  event.preventDefault;
-}
-
 let myCity = document.querySelector("#my-input");
-myCity.addEventListener("submit", handleClick);
-
-// Change city
+myCity.addEventListener("submit", searchCity);
